@@ -143,7 +143,7 @@ function makeAddress(address) {
   cityStateZip.innerText = `${address.city}, ${address.stateCode} ${address.postalCode}`
 
   container.appendChild(line1);
-  if(line2.innerText) {
+  if (line2.innerText) {
     container.appendChild(line2);
   }
   if(line3.innerText) {
