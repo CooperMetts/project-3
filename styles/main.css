@@ -1,6 +1,19 @@
+@media (min-width: 768px) {
+  .park-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .park-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 body {
   margin: 0px;
-  font-family: sans-serif;
 }
 
 nav {
@@ -12,7 +25,6 @@ nav {
   align-items: center;
   font-size: 24px;
   border-bottom: 3px solid white;
-  padding: 1rem 0;
 }
 
 .navbar-logo {
@@ -47,8 +59,12 @@ select {
 .left article {
   color: #2d4b1e;
   background-color: white;
-  margin: 20px 0;
+  margin: 20px;
   font-size: 16px;
+}
+
+.right div {
+  height: 90%;
 }
 
 img {
@@ -69,13 +85,12 @@ li {
   display: inline-block;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 0.5rem;
   background: #c56c39;
   color: white;
-  padding: 0.3em;
-  border-radius: 0.2em;
-  margin-right: 0.5em;
-  margin-top: 0.5em;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  margin-right: 5px;
 }
 
 ul {
@@ -93,32 +108,34 @@ ul {
 
 .park-page {
   display: none;
-  margin: 2rem;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
 }
 
 .park-page.active {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 90%;
+  min-height: 100vh;
+  background: black;
 }
 
 .park-name {
-  color: black;
+  background: #2d4b1e;
+  color: white;
   grid-area: 1 / 1 / 1 / 3;
 }
 
 .left {
   grid-area: 2 / 1 / 3 / 2;
+  background: #2d4b1e;
 }
 
 .right {
   grid-area: 2 / 2 / 3 / 3;
+  background: #2d4b1e;
 }
 
 #back {
   display: block;
-  margin-top: 20px;
-  margin-left: 2rem;
 }
 
 #back.active {
@@ -126,8 +143,9 @@ ul {
 }
 
 #next {
+  background-color: violet;
   margin-top: 20px;
-  margin-right: 2rem;
+  margin-right: 20px;
 }
 
 #next.active {
@@ -136,7 +154,7 @@ ul {
 
 #previous {
   margin-top: 20px;
-  margin-left: 2rem;
+  margin-left: 20px;
 }
 
 #previous.active {
@@ -148,15 +166,17 @@ ul {
   justify-content: space-between;
 }
 
+.done {
+  background-color: #2d4b1e;
+}
+
 .slideshow {
   /* what width and height for fullscreen? */
   width: 100%;
   height: 300px;
-  background: black;
+  background: blue;
   position: relative;
   box-sizing: border-box;
-  padding: 0;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*
@@ -168,6 +188,7 @@ ul {
 */
 
 .slideshow > img {
+  background: red;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -184,70 +205,10 @@ ul {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0.5rem;
+  height: 30px;
   margin: auto 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .slideshow > button.derecho {
-  left: unset;
-  right: 0.5rem;
-}
-
-.map {
-  border-radius: 10px;
-  margin: 20px 0;
-  height: 400px;
-}
-
-main {
-  max-width: 1200px;
-}
-
-.park-name h1 {
-  margin: 0;
-}
-
-.izuierda,
-.derecho {
-  background-color: white;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  border: none;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 2px;
-}
-
-.izuierda i,
-.derecho i {
-  margin-top: 1px;
-}
-
-.izuierda i {
-  margin-right: 2px;
-}
-
-.derecho i {
-  margin-left: 2px;
-}
-
-@media (min-width: 768px) {
-  .park-cards.active {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .park-page.active {
-    display: grid;
-  }
-}
-
-@media (min-width: 1000px) {
-  .park-cards.active {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  right: 0;
 }
