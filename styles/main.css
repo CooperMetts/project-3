@@ -11,11 +11,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-<<<<<<< HEAD
-=======
   border-bottom: 3px solid white;
   padding: 1rem 0;
->>>>>>> dd47f7b29e0c22e214ba4194edc49013201c6322
 }
 
 .navbar-logo {
@@ -59,21 +56,6 @@ select {
   padding: 1rem 2rem;
 }
 
-<<<<<<< HEAD
-.right div {
-  height: 80%;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 0.5rem;
-}
-
-.right ul {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-=======
->>>>>>> dd47f7b29e0c22e214ba4194edc49013201c6322
 img {
   display: block;
   width: 100%;
@@ -173,13 +155,8 @@ ul {
   background: black;
   position: relative;
   box-sizing: border-box;
-<<<<<<< HEAD
-  margin-left: 20px;
-  margin-right: 20px;
-=======
   padding: 0;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
->>>>>>> dd47f7b29e0c22e214ba4194edc49013201c6322
 }
 
 /*
