@@ -72,10 +72,6 @@ function makeCard(park) {
   return article;
 }
 
-function onClick() {
-  console.log(message);
-}
-
 function makeDetailedView(park) {
   removeDetails();
   let top = document.querySelector(".park-name");
@@ -378,7 +374,6 @@ function makeCarousel(images) {
   maxIndex = images.length - 1;
   let izquierda = document.createElement("button");
   let derecho = document.createElement("button");
-  let article = document.createElement("article");
   let section = document.createElement("section");
   images.forEach((image) => {
     const card = makeSlide(image);
@@ -395,8 +390,7 @@ function makeCarousel(images) {
   izquierda.addEventListener("click", decrementIndex);
   section.appendChild(izquierda);
   section.appendChild(derecho);
-  article.appendChild(section);
-  return article;
+  return section;
 }
 
 function makeSlide(image) {

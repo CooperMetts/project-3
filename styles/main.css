@@ -37,6 +37,13 @@ article {
   font-size: 0.75rem;
   background: #2d4b1e;
   color: white;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 300ms;
+}
+article:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 select {
@@ -157,6 +164,8 @@ ul {
   box-sizing: border-box;
   padding: 0;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /*
@@ -250,4 +259,12 @@ main {
   .park-cards.active {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+address > * {
+  margin: 0.3em 0;
+}
+
+address {
+  margin: 1em 0;
 }
