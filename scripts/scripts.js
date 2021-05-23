@@ -229,7 +229,7 @@ function makeHeader(image) {
   let img = document.createElement("img");
 
   // Configure img properties
-  img.src = image.url;
+  img.src = `${image.url}?maxWidth=400`;
   img.alt = image.altText;
 
   header.appendChild(img);
